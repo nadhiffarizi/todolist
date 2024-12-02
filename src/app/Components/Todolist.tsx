@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Chores } from '@/Chores';
 
 
-export function Todolist ({myChores, chores, updateDoneTask, updateTask}:{myChores:Chores, chores:string[], updateDoneTask:(i:string[])=>void, updateTask:(i:string[])=>void}) {
+export function Todolist ({myChores, chores, updateDoneTask}:{myChores:Chores, chores:string[], updateDoneTask:(i:string[])=>void}) {
 
   const [doneTasks, setDoneTasks] = useState<string[]>(myChores.getMyDoneChores())
 
@@ -39,7 +39,7 @@ export function Todolist ({myChores, chores, updateDoneTask, updateTask}:{myChor
 
             {
                 chores.map((item, index)=>{
-                    return <ListItem key={index} item={item} index={index} chore={item} doneTaskHandler={doneTaskHandler} undoneTaskHandler={undoneTaskHandler}/>
+                    return <ListItem key={index} item={item} chore={item} doneTaskHandler={doneTaskHandler} undoneTaskHandler={undoneTaskHandler}/>
                 })
             }
 

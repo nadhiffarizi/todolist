@@ -6,7 +6,7 @@ export function ListItem ({item, chore, doneTaskHandler, undoneTaskHandler}:{ite
 
     const [checked, setChecked] = useState(false)
 
-  function handleChecked(e){
+  function handleChecked(e:React.ChangeEvent<HTMLInputElement>){
     // console.log(e.target.checked)
     setChecked(e.target.checked)
     if(e.target.checked){

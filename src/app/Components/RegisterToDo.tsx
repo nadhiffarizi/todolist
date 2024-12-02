@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Chores } from "@/Chores";
 
-export default function RegisterToDo({myChores, addChores}:{myChores:Chores, addChores:(c:string[] | undefined, mc:Chores)=> void}){
+export default function RegisterToDo({myChores, addChores}:{myChores:Chores, addChores:(c:string[], mc:Chores)=> void}){
 
     // usestate
     const [chore, setChore] = useState("")

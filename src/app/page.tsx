@@ -19,14 +19,10 @@ export default function Home() {
     setDoneTasks([...item])
   }
 
-  function updateTask(item:string[]){
-    setChores([...item])
-  }
-
   return (
     <div className="w-full h-screen ">
       <div className="flex flex-row justify-center w-full h-3/5">
-        <Todolist myChores={myChores} chores={chores} updateDoneTask={updateDoneTask} updateTask={updateTask}/>
+        <Todolist myChores={myChores} chores={chores} updateDoneTask={updateDoneTask}/>
       </div>
 
       <div className="w-full bg-slate-400" style={{height: "0.2px"}}>
